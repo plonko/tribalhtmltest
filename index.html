@@ -1,13 +1,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html>
+ <html xmlns="http://www.w3.org/1999/xhtml"> 
 <head>
     <title>TribalDDB Html test</title>
-    <link rel="stylesheet" type="text/css" href="media/css/style.css">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="media/css/style.css" />
 </head>
 <body>
     <div class="container border">
         <div class="header indent">
-            <img src="http://placehold.it/272x120" class="logo">
+            <img src="http://placehold.it/272x120" class="logo" alt="Logo" />
         </div>
         <div class="top_nav border">
             <ul class="menu">
@@ -20,69 +21,44 @@
         </div>
         <div class="left_col indent border inline-block">
             <ul id="linkContainer" class="menu">
-                <li><a href="#" id="1">2nd nav item 1</a></li>
-                <li><a href="#" id="2">2nd nav item 2</a></li>
-                <li><a href="#" id="3">2nd nav item 3</a></li>
-                <li><a href="#" id="4">2nd nav item 4</a></li>
-                <li><a href="#" id="5">2nd nav item 5</a></li>
-                <li><a href="#" id="6">2nd nav item 6</a></li>
+                <li><a href="#" id="number1">2nd nav item 1</a></li>
+                <li><a href="#" id="number2">2nd nav item 2</a></li>
+                <li><a href="#" id="number3">2nd nav item 3</a></li>
+                <li><a href="#" id="number4">2nd nav item 4</a></li>
+                <li><a href="#" id="number5">2nd nav item 5</a></li>
+                <li><a href="#" id="number6">2nd nav item 6</a></li>
             </ul>
         </div>
         <div class="main_col indent inline-block">
-            <div id="box_1" class="content">
+            <div id="box_number1" class="content">
                 <p class="title">Content area here</p>
                 <p>Bacon ipsum dolor sit amet short loin kevin tenderloin, dolor adipisicing cillum fugiat spare ribs pork. Kielbasa pig ham hock bacon pancetta, tri-tip labore proident pork loin doner. Tri-tip incididunt t-bone, esse sausage ground round ex pariatur qui brisket bresaola deserunt dolor. Cow ham hamburger laboris quis. Velit pork chop turducken aliquip bacon. Bacon incididunt turkey, consectetur do filet mignon enim dolore ground round. Tongue ball tip exercitation bacon ut jerky.</p>
                 <p>In adipisicing shankle, salami aliquip pork belly pastrami magna sunt short loin andouille cupidatat. Doner velit jowl t-bone, bacon leberkas nulla strip steak.</p>
                 <p>Ullamco duis in tenderloin anim spare ribs est laboris adipisicing.</p>
             </div>
-            <div id="box_2" class="content">
+            <div id="box_number2" class="content">
                 Hey I'm 2
             </div>
-            <div id="box_3" class="content">
+            <div id="box_number3" class="content">
                 3 here!
             </div>
-            <div id="box_4" class="content">
+            <div id="box_number4" class="content">
                 Guten Tag, I'm 4
             </div>
-            <div id="box_5" class="content">
+            <div id="box_number5" class="content">
                 Box 5 ready for inspection!
             </div>
-            <div id="box_6" class="content">
+            <div id="box_number6" class="content">
                 This is box 6.
             </div>
         </div>
         <div class="footer_container">
             <div class="footer indent border">
-                Footer
+                Footer. The footer is fixed to the bottom of the viewport. 
             </div>
         </div>
     </div>
-<script>
-    function show(clickerId) {
-            var targetId = document.getElementById("box_"+clickerId);
-            targetId.style.display = 'block';
-            return false;
-    }
-
-    function hideAll() {
-        var boxes = document.getElementsByClassName("content");
-        for(var i = 0; i < boxes.length; i++){
-            boxes[i].style.display = 'none';
-        }
-    }
-
-    var linkContainer = document.getElementById("linkContainer")
-    var links = linkContainer.getElementsByTagName("a");
-
-    for(var i = 0; i < links.length; i++){
-        var elem = links[i];
-        elem.onclick = function(){
-            var clickerId = this.id;
-            hideAll();
-            show(clickerId);
-        };
-    }
-</script>
+    <script  type="text/javascript" src="media/js/script.js" />
 </body>
 </html>
 
