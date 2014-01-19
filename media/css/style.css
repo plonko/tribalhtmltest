@@ -11,6 +11,8 @@ ul,li {
 }
 
 /*Mixin classes*/
+/*Woud normally use LessCss, but for sake of exercise, mixins are done with a class*/
+
 .indent {
     padding: 20px 0 0 20px;
 }
@@ -33,15 +35,11 @@ ul,li {
 
 /*Style*/
 /*Global*/
-html {
-    position: relative;
-    min-height: 100%;
-}
 body {
     color: #878585;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 19px;
-    margin: 0 0 130px;
+    margin: 0 0 130px; /*Allow for the footer which must stick to the bottom of the viewport*/
 }
 
 a, 
@@ -59,8 +57,8 @@ a:hover {
     background: #f0f0f0;
     width: 999px;
     margin: 0 auto;
-    min-height: 200px;
     border-width: 0px 1px;
+    overflow: hidden;
 }
 
 p {
@@ -119,8 +117,6 @@ p {
 .main_col {
     width: 73%;
     float: right;
-/*    min-height: 829px;
-*/
 }
 
 .title {
@@ -140,10 +136,13 @@ p {
 }
 
 .footer {
-    width: 999px;
-    height: 130px;
+    width: 979px; /*normal width minus padding*/
+    height: 109px; /*same but height*/
     margin: 0 auto;
     border-width: 1px 1px 0 1px;
     background: #f0f0f0;
     color: #bebebe;
 }
+
+html, body, .container, .left_col, .main_col { height: 100%; }
+  .left_col, .main_col { display:inline-block; }
