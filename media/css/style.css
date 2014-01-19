@@ -33,6 +33,12 @@ ul,li {
 * html .clearfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
+.inline-block {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
 /*Style*/
 /*Global*/
 body {
@@ -66,6 +72,15 @@ p {
     line-height: 20px;
 }
 
+/*Full height cols trick*/
+html,
+body,
+.container,
+.left_col,
+.main_col {
+    height: 100%;
+}
+
 /*Header*/
 .top_nav {
     border-width: 1px 0px;
@@ -94,11 +109,6 @@ p {
 
 /*Columns*/
 /*Left*/
-.left_col,
-.main_col {
-    background: #f0f0f0;
-}
-
 .left_col {
     float: left;
     border-width: 0px 1px 0px 0px;
@@ -144,5 +154,5 @@ p {
     color: #bebebe;
 }
 
-html, body, .container, .left_col, .main_col { height: 100%; }
-  .left_col, .main_col { display:inline-block; }
+
+
