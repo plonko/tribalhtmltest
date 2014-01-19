@@ -22,21 +22,18 @@ ul,li {
     border-color: #bebebe;
 }
 
-.clearfix:after {
+.menu .clearfix {
     visibility: hidden;
     display: block;
     font-size: 0;
-    content: " ";
-    clear: both;
     height: 0;
-    }
-* html .clearfix             { zoom: 1; } /* IE6 */
-*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+    clear: both;
+    float: none;
+}
 
 .inline-block {
     display: inline-block;
     zoom: 1;
-    *display: inline;
 }
 
 /*Style*/
@@ -154,5 +151,9 @@ body,
     color: #bebebe;
 }
 
+.content {
+    display: none;
 
+}
 
+#box_1 { display: block;}
