@@ -1,3 +1,42 @@
-body {
-    background: pink;
+/*Reset*/
+body, 
+html, 
+ul,li {
+    padding: 0;
+    margin: 0;
+}
+
+ul,li {
+    list-style: none;
+}
+
+/*Mixin classes*/
+.indent {
+    padding: 20px 0 0 20px;
+}
+
+.border {
+    border-style: solid;
+    border-color: #bebebe;
+}
+
+/*Style*/
+.container {
+    background: #f0f0f0;
+    width: 999px;
+    margin: 0 auto;
+    min-height: 200px;
+    border-width: 0px 1px;
+}
+
+.nav {
+    border-width: 1px 0px;
+}
+
+.main_col {
+    border-width: 0px 0px 1px 0px;
+}
+
+.footer {
+    border-width: 1px 0 0 0;
 }
