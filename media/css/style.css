@@ -10,6 +10,17 @@ ul,li {
     list-style: none;
 }
 
+a, 
+a:active,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 /*Mixin classes*/
 .indent {
     padding: 20px 0 0 20px;
@@ -20,7 +31,25 @@ ul,li {
     border-color: #bebebe;
 }
 
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    }
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
 /*Style*/
+/*Global*/
+body {
+    color: #878585;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 19px;
+}
+
 .container {
     background: #f0f0f0;
     width: 999px;
@@ -29,14 +58,62 @@ ul,li {
     border-width: 0px 1px;
 }
 
-.nav {
+p {
+    margin: 0 0 32px 0;
+    line-height: 20px;
+}
+
+/*Header*/
+.top_nav {
     border-width: 1px 0px;
+    padding-left: 22px;
+}
+
+.menu {
+    color: #bebebe;
+    font-size: 17px;
+}
+
+.top_nav li{
+    float: left;
+    margin-right: 44px;
+}
+
+.top_nav li a{
+    display: block;
+    padding: 10px 18px 9px 18px;
+}
+
+.logo {
+    display: block;
+    margin-bottom: 20px;
+}
+
+/*Columns*/
+.left_col {
+    float: left;
+    border-width: 0px 1px 0px 0px;
+    width: 22%; 
+   /* Loose % allows for more descrencies between browsers than exact px
+    Important when floating main content chunks! Also float in opp directions 
+    so no gap on the right in case they don't meet*/
 }
 
 .main_col {
-    border-width: 0px 0px 1px 0px;
+    width: 73%;
+    float: right;
+    min-height: 700px;
+
 }
 
+.title {
+    text-transform: capitalize;
+}
+
+
+/*Footer*/
 .footer {
     border-width: 1px 0 0 0;
+    float: none;
+    clear: both;
 }
