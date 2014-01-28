@@ -1,6 +1,6 @@
 /*Reset*/
-body, 
-html, 
+body,
+html,
 ul,li {
     padding: 0;
     margin: 0;
@@ -29,6 +29,7 @@ ul,li {
     height: 0;
     clear: both;
     float: none;
+    border: 1px solid red;
 }
 
 .inline-block {
@@ -45,10 +46,10 @@ body {
     margin: 0 0 130px; /*Allow for the footer which must stick to the bottom of the viewport*/
 }
 
-a, 
+a,
 a:active,
 a:focus {
-    color: inherit;
+    color: #BEBEBE;
     text-decoration: none;
 }
 
@@ -87,6 +88,7 @@ body,
 .menu {
     color: #bebebe;
     font-size: 17px;
+    height: 41px;
 }
 
 .top_nav li{
@@ -96,7 +98,7 @@ body,
 
 .top_nav li a{
     display: block;
-    padding: 10px 18px 9px 18px;
+    padding: 10px 18px 0px 18px;
 }
 
 .logo {
@@ -109,9 +111,9 @@ body,
 .left_col {
     float: left;
     border-width: 0px 1px 0px 0px;
-    width: 22%; 
+    width: 22%;
    /* Loose % allows for more descrencies between browsers than exact px
-    Important when floating main content chunks! Also float in opp directions 
+    Important when floating main content chunks! Also float in opp directions
     so no gap on the right in case they don't meet*/
 }
 
@@ -134,9 +136,8 @@ body,
 /*Footer*/
 .footer_container {
     width: 100%;
+    min-width: 10px;
     height: 130px;
-    float: none;
-    clear: both;
     position: absolute;
     left: 0;
     bottom: 0;
